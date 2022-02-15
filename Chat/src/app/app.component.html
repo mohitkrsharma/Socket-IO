@@ -1,0 +1,11 @@
+<router-outlet></router-outlet>
+
+<div *ngFor="let message of messageList">
+  <li>
+    {{message}}
+  </li>
+</div>
+
+<input [(ngModel)]="newMessage" (keyup)="$event.keyCode == 13 && sendMessage()" />
+<button (click)="sendMessage()">Send Message</button>
+<div>Developed by Mohit Kumar Sharma on 15 February 2022</div>
